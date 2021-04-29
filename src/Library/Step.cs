@@ -3,6 +3,8 @@
 // Copyright (c) Programación II. Derechos reservados.
 // </copyright>
 //-------------------------------------------------------------------------------
+using System;
+using System.Text;
 
 namespace Full_GRASP_And_SOLID.Library
 {
@@ -23,5 +25,11 @@ namespace Full_GRASP_And_SOLID.Library
         public int Time { get; set; }
 
         public Equipment Equipment { get; set; }
+
+        public void GetStepDetails()
+        {
+            Console.WriteLine($"{this.Quantity} de {Input.Description} usando {Equipment.Description} por {this.Time} horas");
+        }
     }
+    
 }

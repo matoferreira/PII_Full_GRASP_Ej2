@@ -20,12 +20,12 @@ namespace Full_GRASP_And_SOLID
         public static void Main(string[] args)
         {
             PopulateCatalogs();
-
+            ConsolePrinter printer = new ConsolePrinter();
             Recipe recipe = new Recipe();
             recipe.FinalProduct = GetProduct("Café con leche");
             recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
-            recipe.PrintRecipe();
+            printer.PrintRecipe(recipe);
         }
 
         private static void PopulateCatalogs()
