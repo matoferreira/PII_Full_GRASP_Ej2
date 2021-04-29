@@ -26,6 +26,10 @@ namespace Full_GRASP_And_SOLID.Library
 
         public Equipment Equipment { get; set; }
 
+
+/* Como Step es el expert de la información sobre como se compone cada paso, dado que conoce las cantidades de productos, el equipo que se utiliza y por cuanto tiempo:
+    Creemos que es la clase que debe tener la responsabilidad de hacer el Print de cada paso que se realiza. Para cumplir con el principio de SRP, Step es el que 
+    imprime cada paso, ya que si cambia de alguna manera como se compone cada paso, no afecta ni a Recipe ni a ConsolePrinter*/
         public void GetStepDetails()
         {
             Console.WriteLine($"{this.Quantity} de {Input.Description} usando {Equipment.Description} por {this.Time} horas");
